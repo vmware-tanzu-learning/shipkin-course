@@ -1,0 +1,30 @@
+{
+  "title": "Shipkin Plugin",
+  "subjects": [
+    {
+      "title": "Configuration",
+      "lessons": [
+        {
+          "title": "The plugin",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "plugin-configuration.html"
+            }
+          ]
+        },
+        {
+          "title": "Feedback",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "feedback.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

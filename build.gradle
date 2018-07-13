@@ -1,0 +1,16 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+        maven {
+            url "http://platform-acceleration-lab-maven.s3.amazonaws.com"
+        }
+    }
+
+    dependencies {
+        classpath "io.pivotal.pal.shipkin:shipkin-plugin:6.0.0-dev"
+    }
+    ext {
+        topLevelCourseVersion = "2.0.0"
+    }
+}

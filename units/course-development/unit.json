@@ -1,0 +1,20 @@
+{
+  "title": "Course Development",
+  "subjects": [
+    {
+      "title": "running the course locally",
+      "lessons": [
+        {
+          "title": "running the course locally",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "local-development.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

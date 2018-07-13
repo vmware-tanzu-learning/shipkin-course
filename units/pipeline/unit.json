@@ -1,0 +1,20 @@
+{
+  "title": "Concourse Pipeline",
+  "subjects": [
+    {
+      "title": "Pipeline",
+      "lessons": [
+        {
+          "title": "Create a ci pipeline",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "pipeline.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

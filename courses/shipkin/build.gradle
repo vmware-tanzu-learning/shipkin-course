@@ -1,0 +1,47 @@
+apply plugin: "io.pivotal.pal.shipkin.plugin"
+
+shipkin {
+    baseName = "shipkin-starter"
+    courseVersion = topLevelCourseVersion
+    courseTitle = "Shipkin Starter"
+    showDisclaimer = true
+    feedbackUrl = "https://docs.google.com/forms/d/e/shipkin-starter-example-abcdef/viewform"
+    feedbackUrlField = "entry.123456789"
+    useSecurity = false
+
+    reviewSpace = "chicken-review"
+    productionSpace = "chicken-production"
+
+    units = [
+        "using-shipkin",
+        "shipkin-plugin",
+        "theme",
+        "course-development",
+        "pipeline"
+    ]
+
+    topicKey = [
+        "shipkin": "light-blue",
+        "pairing"    : "green"
+    ]
+
+    theme {
+        mainColor = "#6D6875"
+        linkColor = "#488eff"
+        accentColor = "#d62d56"
+        favicon = "/favicon.ico"
+
+        backgroundColor = "#f4f4f4"
+        headerImage = "/industrials.jpg"
+        slideImage = "/sheep.png"
+        logoImage = "/rocket.png"
+
+        font {
+            url = "https://fonts.googleapis.com/css?family=Lora"
+            family = "Lora, serif"
+            color = "#804654"
+        }
+    }
+}
+
+defaultTasks "tasks"

@@ -1,0 +1,3 @@
+rootProject.name = "shipkin"
+
+include ":courses:shipkin"

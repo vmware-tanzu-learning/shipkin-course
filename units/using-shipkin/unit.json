@@ -1,0 +1,50 @@
+{
+  "title": "Shipkining",
+  "subjects": [
+    {
+      "title": "Building a course with Shipkin",
+      "lessons": [
+        {
+          "title": "Create a course",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "course-creation.html"
+            }
+          ]
+        },
+        {
+          "title": "Create a lab",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "lab-creation.html"
+            }
+          ]
+        },
+        {
+          "title": "Shipkin units",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "shipkin-units.html"
+            }
+          ]
+        },
+        {
+          "title": "Shipkin extensions",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "extensions.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+- 2017-12-21 added A change for example-native-developer
+- 2017-12-21 removed Another change for example-native-developer
+- 2017-10-15 changed One more change for example-native-developer
