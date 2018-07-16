@@ -29,7 +29,7 @@ The following options are available:
 1.  `url` allows loading of the font family from a remote URL (a Google
     Fonts URL, for example).
 
-![lab](courseImage.png)
+![lab](../theme/courseImage.png)
 
 # Custom theme files
 

@@ -1,5 +1,32 @@
 ---
 pageTitle: Creating a lab
+
+discussionPoints:
+  - do `this`
+  - then [that](http://example.com)
+  - more bullets
+  - just for damien
+  - 6 people to go
+  - on this lab
+
+wrapUp:
+  - that's a wrap
+  - thumbs up
+
+instructorNotes: |
+  ## Lorem ipsum
+  Dolor sit amet, consectetur adipiscing elit. Nam non
+  lorem nunc. Pellentesque feugiat tellus vitae lacus consectetur
+  lobortis. **Proin** semper tortor a interdum interdum. Quisque feugiat
+  - Praesent ut mi nec
+  - nibh semper porttitor.
+  - Curabitur vel lobortis felis.
+
+  ## Pellentesque habitant
+  Morbi tristique senectus et netus et malesuada
+  fames ac turpis egestas.
+
+favoriteAnimal: turtle
 ---
 
 # Creating a Lab
@@ -19,7 +46,7 @@ The top matter is an optional block at the beginning of a markdown file.
 ```yaml
 
 ---
-pageTitle: An advanced example
+pageTitle: Creating a lab
 discussionPoints:
   - do `this`
   - then [that](http://example.com)
@@ -48,19 +75,27 @@ favoriteAnimal: turtle
 
 ```
 
+## Instructor mode
+Click on the course version at the bottom of the page
+to enable instructor mode. Then press ? to see the options.
+
 The `pageTitle` will be rendered as the subtitle of the page on the
 current page header banner and appended to the html-title of the page.
 
 The `discussionPoints` can be referenced like this
 `::discussionPoints::` anywhere in the markdown.
 
-Discussion Points are viewable as a [slide](#slides) while in
-instructor mode.
+::discussionPoints::
+
+Discussion Points are viewable as a slide while in instructor mode.
+
 
 The `wrapUp` can be referenced like this `::wrapUp::` anywhere in the
 markdown.
 
-Wrap up is viewable as a [slide](#slides) while in instructor mode.
+::wrapUp::
+
+Wrap up is viewable as a slide while in instructor mode.
 If no wrap up is available, the wrap up slide will show the discussion
 points.
 
@@ -70,6 +105,4 @@ instructors during delivery.
 Other variables in the top matter can be referenced within the markdown.
 For example, the `favoriteAnimal` can be referenced like this
 `Animal: ::favoriteAnimal::` anywhere in the markdown and will be
-rendered as: `Animal: turtle`.
-
-![top-matter](topMatter.png)
+rendered as: ::favoriteAnimal::.

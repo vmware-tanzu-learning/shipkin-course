@@ -11,6 +11,6 @@ buildscript {
         classpath "io.pivotal.pal.shipkin:shipkin-plugin:6.0.0-dev"
     }
     ext {
-        topLevelCourseVersion = "2.0.0"
+        topLevelCourseVersion = "2.0.1"
     }
 }

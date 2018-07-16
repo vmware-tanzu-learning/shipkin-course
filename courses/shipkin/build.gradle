@@ -14,15 +14,14 @@ shipkin {
 
     units = [
         "using-shipkin",
-        "shipkin-plugin",
-        "theme",
-        "course-development",
-        "pipeline"
+        "guides"
     ]
 
     topicKey = [
         "shipkin": "light-blue",
-        "pairing"    : "green"
+        "guide"    : "green",
+        "configuration": "gray",
+        "development"    : "orange"
     ]
 
     theme {

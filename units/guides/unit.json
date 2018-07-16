@@ -1,0 +1,49 @@
+{
+  "title": "Guides",
+  "subjects": [
+    {
+      "lessons": [
+        {
+          "title": "Lab acceptance checklist",
+          "topic": "guide",
+          "materials": [
+            {
+              "location": "checklist/index.html",
+              "title": "checklist"
+            }
+          ]
+        },
+        {
+          "title": "Course structure",
+          "topic": "guide",
+          "materials": [
+            {
+              "location": "structure/index.html",
+              "title": "guide"
+            }
+          ]
+        },
+        {
+          "title": "Style",
+          "topic": "guide",
+          "materials": [
+            {
+              "location": "style/index.html",
+              "title": "guide"
+            }
+          ]
+        },
+        {
+          "title": "Best Practices",
+          "topic": "guide",
+          "materials": [
+            {
+              "location": "best-practices/index.html",
+              "title": "guide"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

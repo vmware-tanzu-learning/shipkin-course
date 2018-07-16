@@ -5,12 +5,12 @@
       "title": "Building a course with Shipkin",
       "lessons": [
         {
-          "title": "Create a course",
-          "topic": "shipkin",
+          "title": "Course structure",
+          "topic": "guide",
           "materials": [
             {
-              "title": "lab",
-              "location": "course-creation.html"
+              "location": "structure/index.html",
+              "title": "guide"
             }
           ]
         },
@@ -20,7 +20,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "lab-creation.html"
+              "location": "labs/index.html"
             }
           ]
         },
@@ -35,12 +35,72 @@
           ]
         },
         {
+          "title": "The theme",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "theme-settings.html"
+            }
+          ]
+        },
+        {
           "title": "Shipkin extensions",
           "topic": "shipkin",
           "materials": [
             {
               "title": "lab",
               "location": "extensions.html"
+            }
+          ]
+        },
+        {
+          "title": "Create a ci pipeline",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "pipeline.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Configuration",
+      "lessons": [
+        {
+          "title": "The plugin",
+          "topic": "configuration",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "plugin-configuration.html"
+            }
+          ]
+        },
+        {
+          "title": "Feedback",
+          "topic": "configuration",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "feedback.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Running the course locally",
+      "lessons": [
+        {
+          "title": "running the course locally",
+          "topic": "development",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "local-development.html"
             }
           ]
         }

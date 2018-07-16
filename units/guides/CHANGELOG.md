@@ -1,0 +1,2 @@
+- 2018-01-02 changed Incorporate Google's [styleguide](https://github.com/google/styleguide/tree/gh-pages/docguide).
+- 2018-02-06 changed Restructure styleguide to be the main entry point for course development.
