@@ -2,29 +2,21 @@
 pageTitle: Creating a lab
 
 discussionPoints:
-  - do `this`
-  - then [that](http://example.com)
-  - more bullets
-  - just for damien
-  - 6 people to go
-  - on this lab
-
+  - Why use Shipkin.
+  - Take a look at [Shipkin](http://shipk.in)
+  - Core features of Shipkin.
 wrapUp:
-  - that's a wrap
-  - thumbs up
-
+  - What we have learned about Shipkin.
+  - Keep it simple.
 instructorNotes: |
-  ## Lorem ipsum
-  Dolor sit amet, consectetur adipiscing elit. Nam non
-  lorem nunc. Pellentesque feugiat tellus vitae lacus consectetur
-  lobortis. **Proin** semper tortor a interdum interdum. Quisque feugiat
-  - Praesent ut mi nec
-  - nibh semper porttitor.
-  - Curabitur vel lobortis felis.
+  ## Why use Shipkin
 
-  ## Pellentesque habitant
-  Morbi tristique senectus et netus et malesuada
-  fames ac turpis egestas.
+  Shipkin makes building courses easy and fun. It has some great features:
+
+  - Multiple courses per repo.
+  - Units can be shared across courses.
+  - Customizable themes.
+  - Extensions.
 
 favoriteAnimal: turtle
 ---
@@ -35,9 +27,7 @@ favoriteAnimal: turtle
 
 The body of the lab content is written in markdown.
 Shipkin uses the [Commonmark](http://commonmark.org/) flavor of
-Markdown, with a few extensions which are [described below](#extensions)
-(the [Commonmark Java](https://github.com/atlassian/commonmark-java)
-implementation, to be precise).
+Markdown, with a few [extensions](../extensions) (the [Commonmark Java](https://github.com/atlassian/commonmark-java) implementation, to be precise).
 
 ## Top matter
 
@@ -47,28 +37,23 @@ The top matter is an optional block at the beginning of a markdown file.
 
 ---
 pageTitle: Creating a lab
-discussionPoints:
-  - do `this`
-  - then [that](http://example.com)
-  - more bullets
-  - just for damien
-  - 6 people to go
-  - on this lab
-wrapUp:
-  - that's a wrap
-  - thumbs up
-instructorNotes: |
-  ## Lorem ipsum
-  Dolor sit amet, consectetur adipiscing elit. Nam non
-  lorem nunc. Pellentesque feugiat tellus vitae lacus consectetur
-  lobortis. **Proin** semper tortor a interdum interdum. Quisque feugiat
-  - Praesent ut mi nec
-  - nibh semper porttitor.
-  - Curabitur vel lobortis felis.
 
-  ## Pellentesque habitant
-  Morbi tristique senectus et netus et malesuada
-  fames ac turpis egestas.
+discussionPoints:
+  - Why use Shipkin.
+  - Take a look at [Shipkin](http://shipk.in)
+  - Core features of Shipkin.
+wrapUp:
+  - What we have learned about Shipkin.
+  - Keep it simple.
+instructorNotes: |
+  ## Why use Shipkin
+
+  Shipkin makes building courses easy and fun. It has some great features:
+
+  - Multiple courses per repo.
+  - Units can be shared across courses.
+  - Customizable themes.
+  - Extensions.
 
 favoriteAnimal: turtle
 ---
