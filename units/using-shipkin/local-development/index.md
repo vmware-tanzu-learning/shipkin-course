@@ -2,12 +2,21 @@
 pageTitle: Local Development
 ---
 
-# Local development
+# Serving the course
 
-To serve the course on port `8888` run:
+To serve the course on port `8888` run the following.
 
 ```bash
 ./gradlew run
+```
+from the course directory. If you have multiple courses you can run them
+from each course folder or from the top-level by specifying which course
+you want to run.
+In the case of this course the explicit from the top-level would be the
+following.
+
+```bash
+./gradlew courses:shipkin:run
 ```
 
 Shipkin will check all links in the course and will error if any of them
@@ -43,14 +52,3 @@ To skip link checking, run
     ```bash
     ./gradlew run -PpdfPresentations
     ```
-
-## Automatic reload
-
-When working on the course, you may want your server to auto-generate
-as you save your files.
-To achieve this you can:
--   run in one terminal: `./gradlew run`
--   run in another terminal: `./gradlew build -t`
-
-That last command will build the website and rebuild when source
-files change. 

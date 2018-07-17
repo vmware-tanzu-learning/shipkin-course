@@ -1,3 +1,4 @@
 - 2018-07-04 added A change for extensions
 - 2018-07-09 removed Another change for extensions
 - 2018-07-13 changed structure
+- 2018-07-17 changed complete using-shipkin unit to work with v6 of Shipkin

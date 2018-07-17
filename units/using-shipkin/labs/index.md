@@ -11,7 +11,8 @@ wrapUp:
 instructorNotes: |
   ## Why use Shipkin
 
-  Shipkin makes building courses easy and fun. It has some great features:
+  Shipkin makes building courses easy and fun.
+  It has the following great features.
 
   - Multiple courses per repo.
   - Units can be shared across courses.
@@ -19,6 +20,7 @@ instructorNotes: |
   - Extensions.
 
 favoriteAnimal: turtle
+
 ---
 
 # Creating a Lab
@@ -32,9 +34,10 @@ Markdown, with a few [extensions](../extensions) (the [Commonmark Java](https://
 ## Top matter
 
 The top matter is an optional block at the beginning of a markdown file.
-It is delimited by three `-`. You can set a `pageTitle`, specify
-`discussionPoints`, `wrapUp` and `instructorNotes` as well as custom
-variables like `favoriteAnimal`. Expand `index.md` below to see details.
+It is delimited by three `-`.
+You can set a `pageTitle`, specify `discussionPoints`, `wrapUp` and
+`instructorNotes` as well as custom variables like `favoriteAnimal`.
+Expand `index.md` below to see details.
 
 {{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/labs/index.md" lang="md" ref="master" hidden="true"}}
 
@@ -67,4 +70,5 @@ rendered as: Animal: ::favoriteAnimal::.
 
 ## Instructor mode
 Click on the course version at the bottom of the page
-to enable instructor mode. Then press ? to see available options.
+to enable instructor mode.
+Then press ? to see available options.

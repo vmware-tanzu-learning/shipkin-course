@@ -8,7 +8,7 @@
           "topic": "guide",
           "materials": [
             {
-              "location": "lab-acceptance/index.html",
+              "location": "lab-acceptance",
               "title": "steps"
             }
           ]
@@ -18,7 +18,7 @@
           "topic": "guide",
           "materials": [
             {
-              "location": "style/index.html",
+              "location": "style",
               "title": "guide"
             }
           ]
@@ -28,7 +28,7 @@
           "topic": "guide",
           "materials": [
             {
-              "location": "best-practices/index.html",
+              "location": "best-practices",
               "title": "guide"
             }
           ]
@@ -38,7 +38,7 @@
           "topic": "guide",
           "materials": [
             {
-              "location": "slides/index.html",
+              "location": "slides",
               "title": "guide"
             }
           ]

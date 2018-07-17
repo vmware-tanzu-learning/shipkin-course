@@ -37,16 +37,18 @@ https://docs.google.com/presentation/d/1234ABCD/edit
 ## Changelog
 
 Each unit can have a CHANGELOG.md file that tracks the changes made to
-the unit. Each of these files will be processed by Shipkin to produce a
-changelog for the course.
+the unit.
+Each of these files will be processed by Shipkin to produce a changelog
+for the course.
 
 The goal of the changelog entries are to give instructors a running list
 of changes so that they can easily keep up to date with the evolution of
 the units.
 
-See below for an example entry. Each entry must be contained to one
-line. Update this file each time changes are made to the unit, following
-the format
+See below for an example entry.
+Each entry must be contained to one line.
+Update this file each time changes are made to the unit, following the
+following format.
 
 {{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/CHANGELOG.md" lang="md" ref="master" hidden="false"}}
 

@@ -1,5 +1,4 @@
 {
-  "title": "Shipkining",
   "subjects": [
     {
       "title": "Building a course with Shipkin",
@@ -9,18 +8,18 @@
           "topic": "guide",
           "materials": [
             {
-              "location": "structure/index.html",
-              "title": "guide"
+              "location": "structure",
+              "title": "lab"
             }
           ]
         },
         {
           "title": "Create a lab",
-          "topic": "shipkin",
+          "topic": "guide",
           "materials": [
             {
               "title": "lab",
-              "location": "labs/index.html"
+              "location": "labs"
             }
           ]
         },
@@ -60,47 +59,22 @@
           "materials": [
             {
               "title": "lab",
-              "location": "pipeline.html"
+              "location": "pipeline"
             }
           ]
         }
       ]
     },
     {
-      "title": "Configuration",
+      "title": "Local development",
       "lessons": [
         {
-          "title": "The plugin",
-          "topic": "configuration",
-          "materials": [
-            {
-              "title": "lab",
-              "location": "plugin-configuration.html"
-            }
-          ]
-        },
-        {
-          "title": "Feedback",
-          "topic": "configuration",
-          "materials": [
-            {
-              "title": "lab",
-              "location": "feedback.html"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Running the course locally",
-      "lessons": [
-        {
-          "title": "running the course locally",
+          "title": "Serving the course",
           "topic": "development",
           "materials": [
             {
               "title": "lab",
-              "location": "local-development.html"
+              "location": "local-development"
             }
           ]
         }
