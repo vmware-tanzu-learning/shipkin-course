@@ -6,6 +6,9 @@ pageTitle: Theme Parameters
 
 You can add parameters to the `theme` configuration within the `shipkin`
 closure in your `build.gradle` file to customize your course.
+
+{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
+
 There are four required parameters:
 
 1.  `mainColor` is the color of the site header and footer.
@@ -29,13 +32,18 @@ The following options are available:
 1.  `url` allows loading of the font family from a remote URL (a Google
     Fonts URL, for example).
 
-![lab](../theme/courseImage.png)
+_The below image shows where the theme parameters take effect on the
+rendered page._
+
+![lab](courseImage.png)
+
+
 
 # Custom theme files
 
 You may include a custom header which will replace the default header.
-To do so, add a `theme/header.ftl` file to your project and create your
-header as a freemarker template.
+To do so, add a `theme/header.ftl` file to your `courses/[course-name]`
+folder and create your header as a freemarker template.
 Your header will have access to the following model variables:
 
 -   `title` is a non-null string containing the course title.
@@ -44,8 +52,10 @@ Your header will have access to the following model variables:
     This must be used to load any assets, such as images.
 
 You may also include a custom stylesheet.
-To do so, add a `theme/custom.css` file to your project.
+To do so, add a `theme/custom.css` file to your `courses/[course-name]`
+folder.
 We discourage using the `custom.css` to style anything other than the
 course header and basic document styles, as future updates to Shipkin
 may break your overrides.
+
 To change fonts use the [theme parameters](#theme-parameters).
