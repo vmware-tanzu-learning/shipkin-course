@@ -186,10 +186,10 @@ Pivotal Tracker project.
     to the `feedbackUrlField` key in your Shipkin configuration.
     It should look something like `entry.8888888888`.
 
-1.  Add the below feedback script to the results sheets of your Google
+1.  Add the below feedback script to the results sheet of your Google
     Form (_Tools > Script editor..._).
 
-    {{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/feedback/feedback.js" lang="js" ref="master" hidden="true"}}
+    {{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/structure/feedback.js" lang="javascript" ref="master" hidden="true"}}
 
     Fill in `TRACKER_PROJECT_ID` and `TRACKER_API_TOKEN` with values for
     your Tracker project and user.
