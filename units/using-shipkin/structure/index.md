@@ -48,8 +48,6 @@ Below is the directory structure for this course:
 │           └── sheep.png
 ├── gradle
 │   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
 ├── gradlew
 ├── gradlew.bat
 ├── pal.example.properties
@@ -58,32 +56,7 @@ Below is the directory structure for this course:
 ├── shipkin-starter-v2.iml
 └── units
     ├── guides
-    │   ├── best-practices
-    │   │   └── index.md
-    │   ├── CHANGELOG.md
-    │   ├── checklist
-    │   │   └── index.md
-    │   ├── structure
-    │   │   └── index.md
-    │   ├── style
-    │   │   ├── bad-json.png
-    │   │   └── index.md
-    │   └── unit.json
     └── using-shipkin
-        ├── CHANGELOG.md
-        ├── course-creation.md
-        ├── courseImage.png
-        ├── extensions.md
-        ├── feedback.md
-        ├── githubFile.png
-        ├── lab-creation.md
-        ├── local-development.md
-        ├── pipeline.md
-        ├── plugin-configuration.md
-        ├── shipkin-units.md
-        ├── theme-settings.md
-        └── unit.json
-
 ```
 
 ## Top-level
@@ -92,10 +65,6 @@ The top-level directory of the course repository should contain:
 
 -   A `courses` directory, which contains one or more courses, in this
     case it is `shipkin`.
-    -   The `site` directory within the `shipkin` directory holds the
-        content for the `shipkin` course. 
-    -   A `build.gradle` file.
-        This contains all configuration for the course.
 -   A `units` directory, which contains all the units, which can be
     shared between courses.        
 -   A `gradle` directory along with two wrapper scripts: `gradlew` and
@@ -113,29 +82,46 @@ The top-level directory of the course repository should contain:
     is **not** checked in.
     The credentials vary from course to course.
 
-## Configuration
+### Configuration
 
-The `build.gradle` file contains, in particular, the version of the
-course.
+The top level `build.gradle` file contains, in particular, the version of the
+courses in the `topLevelCourseVersion` variable.
 The version should follow [semantic versioning](https://semver.org/) for
 the course material.
+
+{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="build.gradle" lang="groovy" ref="master" hidden="true"}}
+
 Do not tie the course version to the version of any software included in
 the course, as the material and the software tend to change
 independently.
 
-## Site
+## Courses
 
-The course consists of two units, _guides_ and _using-shipkin_.
+Courses are stored under their name in the `courses` directory. In our
+case as `shipkin`. There can be multiple courses per repo.
 
-Each of the directories within _guides_, _best-practices_, _structure_,
-_checklist_ and _style_ corresponds to a lesson.
+The `site` directory within the `courses/shipkin` directory holds the
+content for the `shipkin` course.
+ 
+The `build.gradle` file contains all configuration for the course. The
+units, which contain much of the content of the course, live in the
+`units` directory at the top-level and are included via the
+__units__ block in the `build.gradle`. 
 
-Notice how each directory is named according to its corresponding
-course, unit, subject, or lesson.
+This allows us to share units between courses.
+
+{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
+
+## Units
+
+The order of the units is defined in each course's `build.gradle` file.
+
+Directories within a unit, i.e. _best-practices_,
+_lab-acceptance_, _slides_ and _style_ correspond to a lesson.
+
 We do not add numbering to the directories since this makes them harder
 to reorder.
-The order of the units is defined in each course's `build.gradle` file,
-while the order of the subjects and lessons is defined in each unit's
+The order of the subjects and lessons is defined in each unit's
 `unit.json` file.
 
 ### Lessons
