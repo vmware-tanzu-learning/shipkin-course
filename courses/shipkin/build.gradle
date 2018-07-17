@@ -5,8 +5,8 @@ shipkin {
     courseVersion = topLevelCourseVersion
     courseTitle = "Shipkin Starter"
     showDisclaimer = true
-    feedbackUrl = "https://docs.google.com/forms/d/e/shipkin-starter-example-abcdef/viewform"
-    feedbackUrlField = "entry.123456789"
+    feedbackUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfajZb-OKfWB7SGMgmTtaVCFO5VT3Fqtc2tJU5CMxO6x8DU4g/viewform"
+    feedbackUrlField = "entry.1915922799"
     useSecurity = false
 
     reviewSpace = "platform-acceleration-lab-review"
