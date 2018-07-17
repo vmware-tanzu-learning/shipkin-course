@@ -6,8 +6,7 @@ pageTitle: Units in Shipkin
 
 We arrange the course into a hierarchy of *units* containing *subjects*,
 each labeled with a title.
-If there is only one unit, we name its folder `unit`.
-Add units as directories within the `site` folder.
+Add units as directories within the top-level `units` folder.
 
 Each subject contains a series of *lessons*, which contain a
 *description* and one or more *materials*.
@@ -29,38 +28,30 @@ For example the identifier for a presentation with the url below is
 https://docs.google.com/presentation/d/1234ABCD/edit
 ```
 
-## Units as submodules
-
-Submodules should only be used for units that are shared with multiple
-courses.
-
-The git repositories of these special use cases should have the suffix
-`-unit`, but the unit folders should not have this suffix.
-
 ## Creating a unit
 
-1.  Copy the [unit.json](site/example-native-developer/unit.json) into each
-    unit.
+1.  Copy the __unit.json__ file into each unit.
+    {{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/unit.json" lang="json" ref="master" hidden="true"}}
 1.  Update your `unit.json` to help generate the index.
 
 ## Changelog
 
-Each unit can have a [CHANGELOG.md](site/example-native-developer/CHANGELOG.md)
-file that tracks the changes made to the unit.
-Each of these files will be processed by Shipkin to produce a changelog
-for the course.
+Each unit can have a CHANGELOG.md file that tracks the changes made to
+the unit. Each of these files will be processed by Shipkin to produce a
+changelog for the course.
 
 The goal of the changelog entries are to give instructors a running list
 of changes so that they can easily keep up to date with the evolution of
 the units.
 
-See `site/example-native-developer/CHANGELOG.md` for an example entry.
-Each entry must be contained to one line.
-Update this file each time changes are made to the unit, following the
-format
+See below for an example entry. Each entry must be contained to one
+line. Update this file each time changes are made to the unit, following
+the format
+
+{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/CHANGELOG.md" lang="md" ref="master" hidden="false"}}
 
 ```markdown
-- YYYY-MM-DD <ACTION> A change for example-native-developer
+- YYYY-MM-DD <ACTION> A change for extensions
 ```
 
 where `<ACTION>` is one of (`added`, `removed`, `changed`).

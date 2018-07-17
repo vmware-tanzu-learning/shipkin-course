@@ -124,6 +124,8 @@ to reorder.
 The order of the subjects and lessons is defined in each unit's
 `unit.json` file.
 
+More details on units can be found [here](../shipkin-units).
+
 ### Lessons
 
 The material for each lesson is nested under the lesson's folder.

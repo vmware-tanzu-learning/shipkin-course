@@ -1,3 +1,3 @@
-- 2017-12-21 added A change for example-native-developer
-- 2017-12-21 removed Another change for example-native-developer
-- 2017-10-15 changed One more change for example-native-developer
+- 2018-07-04 added A change for extensions
+- 2018-07-09 removed Another change for extensions
+- 2018-07-13 changed structure

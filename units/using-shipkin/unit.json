@@ -25,17 +25,17 @@
           ]
         },
         {
-          "title": "Shipkin units",
+          "title": "Units",
           "topic": "shipkin",
           "materials": [
             {
               "title": "lab",
-              "location": "shipkin-units.html"
+              "location": "shipkin-units"
             }
           ]
         },
         {
-          "title": "The theme",
+          "title": "Theme",
           "topic": "shipkin",
           "materials": [
             {
@@ -45,7 +45,7 @@
           ]
         },
         {
-          "title": "Shipkin extensions",
+          "title": "Extensions",
           "topic": "shipkin",
           "materials": [
             {
@@ -55,7 +55,7 @@
           ]
         },
         {
-          "title": "Create a ci pipeline",
+          "title": "Pipeline",
           "topic": "shipkin",
           "materials": [
             {
