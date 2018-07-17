@@ -1,7 +1,7 @@
 apply plugin: "io.pivotal.pal.shipkin.plugin"
 
 shipkin {
-    baseName = "shipkin-starter"
+    baseName = "shipkin"
     courseVersion = topLevelCourseVersion
     courseTitle = "Shipkin Starter"
     showDisclaimer = true
