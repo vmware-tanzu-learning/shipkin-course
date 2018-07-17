@@ -9,8 +9,8 @@ shipkin {
     feedbackUrlField = "entry.123456789"
     useSecurity = false
 
-    reviewSpace = "chicken-review"
-    productionSpace = "chicken-production"
+    reviewSpace = "platform-acceleration-lab-review"
+    productionSpace = "platform-acceleration-lab-production"
 
     units = [
         "using-shipkin",
@@ -20,7 +20,6 @@ shipkin {
     topicKey = [
         "shipkin": "light-blue",
         "guide"    : "green",
-        "configuration": "gray",
         "development"    : "orange"
     ]
 
