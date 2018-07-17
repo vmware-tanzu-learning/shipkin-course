@@ -4,22 +4,12 @@
     {
       "lessons": [
         {
-          "title": "Lab acceptance checklist",
+          "title": "Lab acceptance procedure",
           "topic": "guide",
           "materials": [
             {
-              "location": "checklist/index.html",
-              "title": "checklist"
-            }
-          ]
-        },
-        {
-          "title": "Course structure",
-          "topic": "guide",
-          "materials": [
-            {
-              "location": "structure/index.html",
-              "title": "guide"
+              "location": "lab-acceptance/index.html",
+              "title": "steps"
             }
           ]
         },
@@ -39,6 +29,16 @@
           "materials": [
             {
               "location": "best-practices/index.html",
+              "title": "guide"
+            }
+          ]
+        },
+        {
+          "title": "Slide style guide",
+          "topic": "guide",
+          "materials": [
+            {
+              "location": "slides/index.html",
               "title": "guide"
             }
           ]

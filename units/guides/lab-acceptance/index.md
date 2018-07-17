@@ -4,7 +4,7 @@ pageTitle: Lab acceptance checklist
 
 # Purpose
 
-Complete this checklist before accepting stories that create new labs or
+Go through this list before accepting stories that create new labs or
 modify existing labs.
 
 # Lab acceptance
