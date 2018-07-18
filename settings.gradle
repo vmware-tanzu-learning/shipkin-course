@@ -1,3 +1,4 @@
 rootProject.name = "shipkin"
 
 include ":courses:shipkin"
+include ":courses:fake-shipkin"
