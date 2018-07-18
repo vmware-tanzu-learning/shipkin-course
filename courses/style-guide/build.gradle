@@ -1,0 +1,27 @@
+apply plugin: "io.pivotal.pal.shipkin.plugin"
+
+shipkin {
+    baseName = "styleguide"
+    courseVersion = topLevelCourseVersion
+    courseTitle = "Course development guide"
+    useSecurity = false
+    feedbackUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfajZb-OKfWB7SGMgmTtaVCFO5VT3Fqtc2tJU5CMxO6x8DU4g/viewform"
+    feedbackUrlField = "entry.1915922799"
+
+    reviewSpace = "platform-acceleration-lab-review"
+    productionSpace = "platform-acceleration-lab-production"
+
+    units = ["guides"]
+
+    theme {
+        mainColor = "#003152"
+        linkColor = "#1B78B3"
+        accentColor = "#00A79D"
+        favicon = "/favicon.png"
+
+        headerImage = "/images/pen.jpg"
+        logoImage = "/images/logo-pal.svg"
+    }
+}
+
+defaultTasks "tasks"
