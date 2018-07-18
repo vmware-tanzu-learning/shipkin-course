@@ -3,7 +3,7 @@ apply plugin: "io.pivotal.pal.shipkin.plugin"
 shipkin {
     baseName = "shipkin"
     courseVersion = topLevelCourseVersion
-    courseTitle = "Shipkin Starter"
+    courseTitle = "Shipkin Course"
     showDisclaimer = true
     feedbackUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfajZb-OKfWB7SGMgmTtaVCFO5VT3Fqtc2tJU5CMxO6x8DU4g/viewform"
     feedbackUrlField = "entry.1915922799"
