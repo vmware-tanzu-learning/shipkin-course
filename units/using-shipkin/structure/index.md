@@ -107,7 +107,7 @@ Within the course folder there are multiple files required.
     This file contains examples of the credentials needed to deploy the
     course.
     This file is meant to be copied to a `pal.properties` file which is
-    **not** checked in.
+    **not** checked into version control.
     The credentials file does not vary per course.
 -   A `course.example.properties` file.
     This file contains examples of the credentials needed to secure the
