@@ -123,7 +123,7 @@ Within the course folder there are multiple files required.
     -   `useSecurity` is a boolean field that toggles the use of basic auth
         when the course is deployed.
         If no value is provided it defaults to true.
-    -   `feedbackUrl` is a link to your google form for accepting feedback.
+    -   `feedbackUrl` is a link to your Google form for accepting feedback.
         See the [feedback section](../feedback) for more info.
     -   `feedbackUrlField` is the `name` attribute of the input containing
         the *url* field on your feedback form.

@@ -24,21 +24,14 @@ shipkin {
     ]
 
     theme {
-        mainColor = "#6D6875"
-        linkColor = "#488eff"
-        accentColor = "#d62d56"
+        mainColor = "#003152"
+        linkColor = "#1B78B3"
+        accentColor = "#00A79D"
         favicon = "/favicon.ico"
 
-        backgroundColor = "#f4f4f4"
         headerImage = "/industrials.jpg"
         slideImage = "/sheep.png"
         logoImage = "/rocket.png"
-
-        font {
-            url = "https://fonts.googleapis.com/css?family=Lora"
-            family = "Lora, serif"
-            color = "#804654"
-        }
     }
 }
 
