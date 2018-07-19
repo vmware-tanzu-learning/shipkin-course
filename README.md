@@ -1,5 +1,6 @@
 
 # [Shipkin](http://www.shipk.in/) course
 
-__This course is W.I.P. and in draft status, depending on shipkin v6,
-which is not released.__
+This repository contains a Shipkin course that explains how to build a
+Shipkin course.
+See the [deployed](http://shipkin.pal.pivotal.io/) version for details.
