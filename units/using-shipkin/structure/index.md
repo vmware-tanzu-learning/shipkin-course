@@ -28,20 +28,25 @@ Each lesson should have at most one material of each type.
 
 Materials with type *slides* should use Google Presentations rather than
 referencing local files.
-See the starter course for more details.
 
 # Repository structure
 
 Below is the directory structure for this course:
 
 ```no-highlight
+.
 ├── README.md
 ├── build.gradle
 ├── courses
-│   └── shipkin
+│   ├── shipkin
+│   │   ├── build.gradle
+│   │   ├── course.example.properties
+│   │   ├── pal.example.properties
+│   │   └── site
+│   └── style-guide
 │       ├── build.gradle
-│       ├── course.example.properties
-│       ├── pal.example.properties
+│       ├── course.example.properties
+│       ├── pal.example.properties
 │       └── site
 ├── gradle
 │   └── wrapper
@@ -59,6 +64,7 @@ Below is the directory structure for this course:
     └── using-shipkin
         ├── CHANGELOG.md
         ├── extensions
+        ├── feedback
         ├── labs
         ├── local-development
         ├── pipeline
