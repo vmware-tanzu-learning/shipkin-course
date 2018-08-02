@@ -46,7 +46,8 @@ Each codebase will be zipped along with its git repository in the
 
     {{codebase-file codebase="shipkin-course" path="units/using-shipkin/unit.json" lang="json" ref="master" hidden="true"}}
 
-1.  Update your `unit.json` to help generate the index.
+1.  Update your `unit.json` to help generate the index and to include
+    your codebases.
 
 ## Changelog
 
