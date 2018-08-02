@@ -45,8 +45,8 @@ For example:
 
 Now, configure PCF to provide a config server.
 
-1.  Add the config server to the list of services in `cf.gradle`.
-    We supply `config-server.json` as configuration for the service.
+1.  Add the config server to the list of services in __cf.gradle__.
+    We supply __config-server.json__ as configuration for the service.
 
 1.  Run the `createServices` Gradle command to ensure that you have a
     config server service instance available to your applications.
@@ -66,7 +66,7 @@ Consider the two following sets of instructions:
 
 ## Not-so-good
 
-1.  Create a file named `index.html`:
+1.  Create a file named __index.html__:
 
     ```bash
     cat  > ./index.html <<-EOF
@@ -93,7 +93,7 @@ Consider the two following sets of instructions:
 
 ## Better
 
-1.  Create file named `index.html` with the following content:
+1.  Create file named __index.html__ with the following content:
 
     ```html
     <html>
@@ -119,7 +119,7 @@ desired result.
 
 A user completing the second example must think a bit before completing
 each step.
-They are able to create the `index.html` and `Staticfile` files using
+They are able to create the __index.html__ and __Staticfile__ files using
 their method of choice.
 If they have not previously used the CF CLI, they will become familiar
 with the `cf help` command and the documentation for `cf push`. 

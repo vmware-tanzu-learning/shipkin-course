@@ -243,6 +243,13 @@ can suffice for both kinds of lists:
 1. Bar.
 ```
 
+# File names
+
+Use bold for file names, do not use code blocks.
+- _DO_: Create an __index.md__ file.
+- _DO NOT_: ~~Create an `index.md` file.~~
+
+
 # Code
 
 ## Inline
@@ -261,7 +268,7 @@ Use inline code when referring to file types in an abstract sense,
 rather than a specific file:
 
 ```markdown
-Be sure to update your `README.md`!
+Be sure to update your __README.md__!
 ```
 
 Backticks are the most common approach for *escaping* Markdown

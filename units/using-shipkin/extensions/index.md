@@ -14,13 +14,13 @@ file.
 ```
 
 -   `codebase`: The codebase when the file is located, as listed in the
-    `unit.json` file.
+    __unit.json__ file.
 -   `path` path to the file.
 -   `ref` the branch or tag for the file.
 -   `lang` the programming language the code is in for highlighting.
 -   `hidden` boolean that specifies if the included file is visible,
     default is _true_.
 
-The included file will look like this:
+The included file will look as follows.
 
 {{codebase-file codebase="prerequisite-code" path="build.gradle" lang="groovy" ref="master" hidden="false"}}

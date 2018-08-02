@@ -4,7 +4,8 @@ pageTitle: Local Development
 
 # Serving the course
 
-To serve the course on port `8888` run the following.
+To serve the course on port 8888 run the following from the course
+directory.
 
 ```bash
 ./gradlew run
