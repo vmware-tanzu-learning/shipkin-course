@@ -7,7 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "io.pivotal.pal.shipkin:shipkin-plugin:6.0.4"
+        classpath "io.pivotal.pal.shipkin:shipkin-plugin:7.0.0"
     }
     ext {
         topLevelCourseVersion = "2.0.9"

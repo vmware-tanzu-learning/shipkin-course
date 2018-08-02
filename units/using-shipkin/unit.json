@@ -90,5 +90,8 @@
         }
       ]
     }
-  ]
+  ],
+  "codebases": {
+    "shipkin-course": "https://github.com/platform-acceleration-lab/shipkin-course.git"
+  }
 }

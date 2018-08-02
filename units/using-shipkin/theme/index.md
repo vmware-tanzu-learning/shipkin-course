@@ -7,7 +7,7 @@ pageTitle: Theme Parameters
 You can add parameters to the `theme` configuration within the `shipkin`
 closure in your `build.gradle` file to customize your course.
 
-{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
+{{codebase-file codebase="shipkin-course" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
 
 There are four required parameters:
 

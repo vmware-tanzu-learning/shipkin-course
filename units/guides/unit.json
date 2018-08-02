@@ -45,5 +45,10 @@
         }
       ]
     }
-  ]
+  ],
+  "codebases": {
+    "shipkin-course": "https://github.com/platform-acceleration-lab/shipkin-course.git",
+    "prerequisite-code": "https://github.com/platform-acceleration-lab/prerequisite-code.git",
+    "movie-fun": "https://github.com/platform-acceleration-lab/apps-movie-fun-code.git"
+  }
 }

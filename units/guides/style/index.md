@@ -285,7 +285,7 @@ When it is appropriate to embed an entire file, rather than paste the
 contents of the file, use the custom GitHub embed tag.
 
 ```markdown
-{{github-file owner="platform-acceleration-lab" repo="apps-movie-fun-code" path="applications/movie-fun-app/src/main/java/org/superbiz/moviefun/SecurityConfig.java" ref="security" lang="java"}}
+{{codebase-file codebase="movie-fun" path="applications/movie-fun-app/src/main/java/org/superbiz/moviefun/SecurityConfig.java" ref="security" lang="java"}}
 ```
 
 If only a subset of the file is needed, link to the file in the

@@ -39,7 +39,7 @@ You can set a `pageTitle`, specify `discussionPoints`, `wrapUp` and
 `instructorNotes` as well as custom variables like `favoriteAnimal`.
 Expand `index.md` below to see details.
 
-{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/labs/index.md" lang="md" ref="master" hidden="true"}}
+{{codebase-file codebase="shipkin-course" path="units/using-shipkin/labs/index.md" lang="md" ref="master" hidden="true"}}
 
 The `pageTitle` will be rendered as the subtitle of the page on the
 current page header banner and appended to the html-title of the page.

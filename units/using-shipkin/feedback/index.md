@@ -31,7 +31,7 @@ Pivotal Tracker project.
 1.  Add the below feedback script to the results sheet of your Google
     Form (_Tools > Script editor..._).
 
-    {{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/feedback/feedback.js" lang="javascript" ref="master" hidden="true"}}
+    {{codebase-file codebase="shipkin-course" path="units/using-shipkin/feedback/feedback.js" lang="javascript" ref="master" hidden="true"}}
 
     Fill in `TRACKER_PROJECT_ID` and `TRACKER_API_TOKEN` with values for
     your Tracker project and user.

@@ -10,12 +10,11 @@ It can be used by inserting the following snippet anywhere in a markdown
 file.
 
 ```markdown
-{{github-file owner="platform-acceleration-lab" repo="prerequisite-code"
-path="build.gradle" lang="groovy" ref="master" hidden="false"}}
+{{codebase-file codebase="prerequisite-code" path="build.gradle" lang="groovy" ref="master" hidden="false"}}
 ```
 
--   `owner`: Github org where the code lives.
--   `repo` the repository for the file.
+-   `codebase`: The codebase when the file is located, as listed in the
+    `unit.json` file.
 -   `path` path to the file.
 -   `ref` the branch or tag for the file.
 -   `lang` the programming language the code is in for highlighting.
@@ -24,4 +23,4 @@ path="build.gradle" lang="groovy" ref="master" hidden="false"}}
 
 The included file will look like this:
 
-{{github-file owner="platform-acceleration-lab" repo="prerequisite-code" path="build.gradle" lang="groovy" ref="master" hidden="false"}}
+{{codebase-file codebase="prerequisite-code" path="build.gradle" lang="groovy" ref="master" hidden="false"}}

@@ -86,7 +86,7 @@ courses in the `topLevelCourseVersion` variable.
 The version should follow [semantic versioning](https://semver.org/) for
 the course material.
 
-{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="build.gradle" lang="groovy" ref="master" hidden="true"}}
+{{codebase-file codebase="shipkin-course" path="build.gradle" lang="groovy" ref="master" hidden="true"}}
 
 Do not tie the course version to the version of any software included in
 the course, as the material and the software tend to change
@@ -94,7 +94,7 @@ independently.
 
 A `settings.gradle` which contains the project name and includes the
 contained courses.
-{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="settings.gradle" lang="groovy" ref="master" hidden="true"}}
+{{codebase-file codebase="shipkin-course" path="settings.gradle" lang="groovy" ref="master" hidden="true"}}
 
 ## Courses
 
@@ -135,7 +135,7 @@ Within the course folder there are multiple files required.
     -   `productionSpace` is the space used to deploy the application for
         production on CF.
 
-    {{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
+    {{codebase-file codebase="shipkin-course" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
 
 The `site` directory within the `courses/shipkin` directory holds the
 content for the `shipkin` course.

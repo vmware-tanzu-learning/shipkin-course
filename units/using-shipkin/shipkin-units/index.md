@@ -28,10 +28,24 @@ For example the identifier for a presentation with the url below is
 https://docs.google.com/presentation/d/1234ABCD/edit
 ```
 
+## Codebases
+
+The `unit.json` file also contains a `codebases` key whose value is an
+object containing information about the codebases related to the unit.
+The keys of the codebases object are codebase names written in
+[kebab case](https://en.wikipedia.org/wiki/Kebab_case).
+The values of the codebases object are the HTTPS addresses of the
+corresponding git repositories, which must be publicly accessible.
+
+Each codebase will be zipped along with its git repository in the
+`codebases` directory of the course zip folder.
+
 ## Creating a unit
 
 1.  Copy the __unit.json__ file into each unit.
-    {{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/unit.json" lang="json" ref="master" hidden="true"}}
+
+    {{codebase-file codebase="shipkin-course" path="units/using-shipkin/unit.json" lang="json" ref="master" hidden="true"}}
+
 1.  Update your `unit.json` to help generate the index.
 
 ## Changelog
@@ -50,7 +64,7 @@ Each entry must be contained to one line.
 Update this file each time changes are made to the unit, following the
 following format.
 
-{{github-file owner="platform-acceleration-lab" repo="shipkin-starter-v2" path="units/using-shipkin/CHANGELOG.md" lang="md" ref="master" hidden="false"}}
+{{codebase-file codebase="shipkin-course" path="units/using-shipkin/CHANGELOG.md" lang="md" ref="master" hidden="false"}}
 
 ```markdown
 - YYYY-MM-DD <ACTION> A change for extensions
