@@ -37,7 +37,7 @@ The top matter is an optional block at the beginning of a markdown file.
 It is delimited by three `-`.
 You can set a `pageTitle`, specify `discussionPoints`, `wrapUp` and
 `instructorNotes` as well as custom variables like `favoriteAnimal`.
-Expand __index.md__ below to see details.
+Expand `index.md` below to see details.
 
 {{codebase-file codebase="shipkin-course" path="units/using-shipkin/labs/index.md" lang="md" ref="master" hidden="true"}}
 

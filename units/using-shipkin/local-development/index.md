@@ -4,17 +4,16 @@ pageTitle: Local Development
 
 # Serving the course
 
-To serve the course on port 8888 run the following from the course
-directory.
+To serve the course on port `8888` run the following command from the
+project root directory.
 
 ```bash
 ./gradlew run
 ```
-from the course directory. If you have multiple courses you can run them
-from each course folder or from the top-level by specifying which course
-you want to run.
-In the case of this course the explicit from the top-level would be the
-following.
+If you have multiple courses, run them individually from the top-level
+by specifying which course you want to run.
+In the case of this course the explicit from the top-level run command
+would be the following.
 
 ```bash
 ./gradlew courses:shipkin:run

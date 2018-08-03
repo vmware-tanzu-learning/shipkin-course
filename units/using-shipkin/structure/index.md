@@ -78,16 +78,16 @@ Below is the directory structure for this course:
 
 The top-level directory of the course repository should contain:
 
--   A __courses__ directory, which contains one or more courses, in this
-    case it is __shipkin__.
--   A __units__ directory, which contains all the units, which can be
+-   A `courses` directory, which contains one or more courses, in this
+    case it is `shipkin`.
+-   A `units` directory, which contains all the units, which can be
     shared between courses.        
--   A __gradle__ directory along with two wrapper scripts: __gradlew__ and
-    __gradlew.bat__.
+-   A `gradle` directory along with two wrapper scripts: `gradlew` and
+    `gradlew.bat`.
 
 ### Configuration
 
-The top level __build.gradle__ file contains, in particular, the version of the
+The top level `build.gradle` file contains, in particular, the version of the
 courses in the `topLevelCourseVersion` variable.
 The version should follow [semantic versioning](https://semver.org/) for
 the course material.
@@ -98,31 +98,31 @@ Do not tie the course version to the version of any software included in
 the course, as the material and the software tend to change
 independently.
 
-A __settings.gradle__ which contains the project name and includes the
+A `settings.gradle` which contains the project name and includes the
 contained courses.
 {{codebase-file codebase="shipkin-course" path="settings.gradle" lang="groovy" ref="master" hidden="true"}}
 
 ## Courses
 
-Courses are stored under their name in the __courses__ directory.
-In our case as __shipkin__.
+Courses are stored under their name in the `courses` directory. 
+In our case as `shipkin`. 
 There can be multiple courses per repo.
 
 Within the course folder there are multiple files required.
--   A __pal.example.properties__ file.
+-   A `pal.example.properties` file.
     This file contains examples of the credentials needed to deploy the
     course.
-    This file is meant to be copied to a __pal.properties__ file which is
+    This file is meant to be copied to a `pal.properties` file which is
     **not** checked into version control.
     The credentials file does not vary per course.
--   A __course.example.properties__ file.
+-   A `course.example.properties` file.
     This file contains examples of the credentials needed to secure the
     course.
-    This file is meant to be copied to a __course.properties__ file which
+    This file is meant to be copied to a `course.properties` file which
     is **not** checked in.
     The credentials vary from course to course.
  
--   The __build.gradle__ file contains all configuration for the course.
+-   The `build.gradle` file contains all configuration for the course. 
     -   `courseTitle`, `courseVersion` and `baseName` are required.
     -   `units` is an array that specifies the order in which units are
         rendered on the index page.
@@ -143,12 +143,12 @@ Within the course folder there are multiple files required.
 
     {{codebase-file codebase="shipkin-course" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
 
-The __site__ directory within the __courses/shipkin__ directory holds the
-content for the __shipkin__ course.
+The `site` directory within the `courses/shipkin` directory holds the
+content for the `shipkin` course.
 
 ## Units
 
-The order of the units is defined in each course's __build.gradle__ file.
+The order of the units is defined in each course's `build.gradle` file.
 
 Directories within a unit, i.e. _best-practices_,
 _lab-acceptance_, _slides_ and _style_ correspond to a lesson.
@@ -156,14 +156,14 @@ _lab-acceptance_, _slides_ and _style_ correspond to a lesson.
 We do not add numbering to the directories since this makes them harder
 to reorder.
 The order of the subjects and lessons is defined in each unit's
-__unit.json__ file.
+`unit.json` file.
 
 More details on units can be found [here](../shipkin-units).
 
 ### Lessons
 
 The material for each lesson is nested under the lesson's folder.
-We name the markdown file __index.md__.
+We name the markdown file `index.md`.
 All other resources in the folder are given names that describe their
 content.
 Do not add numbering to these resources since it makes it harder to

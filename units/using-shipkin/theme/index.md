@@ -5,7 +5,7 @@ pageTitle: Theme Parameters
 # Theme parameters
 
 You can add parameters to the `theme` configuration within the `shipkin`
-closure in your __build.gradle__ file to customize your course.
+closure in your `build.gradle` file to customize your course.
 
 {{codebase-file codebase="shipkin-course" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
 
@@ -42,7 +42,7 @@ rendered page._
 # Custom theme files
 
 You may include a custom header which will replace the default header.
-To do so, add a __theme/header.ftl__ file to your __courses/[course-name]__
+To do so, add a `theme/header.ftl` file to your `courses/[course-name]`
 folder and create your header as a freemarker template.
 Your header will have access to the following model variables:
 
@@ -52,9 +52,9 @@ Your header will have access to the following model variables:
     This must be used to load any assets, such as images.
 
 You may also include a custom stylesheet.
-To do so, add a __theme/custom.css__ file to your __courses/[course-name]__
+To do so, add a `theme/custom.css` file to your `courses/[course-name]`
 folder.
-We discourage using the __custom.css__ to style anything other than the
+We discourage using the `custom.css` to style anything other than the
 course header and basic document styles, as future updates to Shipkin
 may break your overrides.
 

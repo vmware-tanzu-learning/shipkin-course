@@ -10,8 +10,8 @@ Generate a Concourse pipeline for your application with:
 ./gradlew generatePipeline
 ```
 
-This command assumes a __course.properties__ (optional) and
-__pal.properties__ in the top level of the course.
+This command assumes a `course.properties` (optional) and
+`pal.properties` in the top level of the course.
 
 The `generatePipeline` command reads the local `origin` git remote url
 in order to set the url on Concourse.

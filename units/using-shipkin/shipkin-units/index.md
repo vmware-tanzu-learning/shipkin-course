@@ -6,7 +6,7 @@ pageTitle: Units in Shipkin
 
 We arrange the course into a hierarchy of *units* containing *subjects*,
 each labeled with a title.
-Add units as directories within the top-level __units__ folder.
+Add units as directories within the top-level `units` folder.
 
 Each subject contains a series of *lessons*, which contain a
 *description* and one or more *materials*.
@@ -30,7 +30,7 @@ https://docs.google.com/presentation/d/1234ABCD/edit
 
 ## Codebases
 
-The __unit.json__ file also contains a __codebases__ key whose value is an
+The `unit.json` file also contains a `codebases` key whose value is an
 object containing information about the codebases related to the unit.
 The keys of the codebases object are codebase names written in
 [kebab case](https://en.wikipedia.org/wiki/Kebab_case).
@@ -46,7 +46,7 @@ Each codebase will be zipped along with its git repository in the
 
     {{codebase-file codebase="shipkin-course" path="units/using-shipkin/unit.json" lang="json" ref="master" hidden="true"}}
 
-1.  Update your __unit.json__ to help generate the index and to include
+1.  Update your `unit.json` to help generate the index and to include
     your codebases.
 
 ## Changelog
@@ -62,7 +62,7 @@ the units.
 
 See below for an example entry.
 Each entry must be contained to one line.
-Update this file each time changes are made to the unit, using the
+Update this file each time changes are made to the unit, following the
 following format.
 
 {{codebase-file codebase="shipkin-course" path="units/using-shipkin/CHANGELOG.md" lang="md" ref="master" hidden="false"}}
