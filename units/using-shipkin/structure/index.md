@@ -5,7 +5,7 @@ pageTitle: Course structure
 # Purpose
 
 We use the below course structure to ensure consistency between courses
-and to maximize course maintainability. 
+and to maximize course maintainability.
 
 # Hierarchy
 

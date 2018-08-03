@@ -52,3 +52,20 @@ To skip link checking, run
     ```bash
     ./gradlew run -PpdfPresentations
     ```
+
+## Live reload
+
+When working on the course, it is sometimes convenient to auto-generate
+as you save your files.
+To achieve, do the following.
+
+1.  Run the course in one terminal:
+    ```bash
+    ./gradlew courses:${COURSE_NAME}:run
+    ```
+
+1.  Instruct Gradle to re-generate upon changes in another terminal:
+
+    ```bash
+    ./gradlew courses:${COURSE_NAME}:generate -t
+    ```

@@ -1,4 +1,4 @@
-rootProject.name = "shipkin"
+rootProject.name = "shipkin-course"
 
 include ":courses:shipkin"
 include ":courses:style-guide"
