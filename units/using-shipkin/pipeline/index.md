@@ -4,31 +4,61 @@ pageTitle: Pipeline
 
 # Pipeline
 
-Generate a Concourse pipeline for your application with:
+Shipkin can generate Concourse pipelines for publishing courses from a project to PWS or to Amazon S3.
+
+Generated pipelines will using student login credentials from an optional `course.properties` file
+in each course directory.
+
+
+## Generate for Pivotal Web Services
+
+Generate a PWS pipeline for publishing all courses under a project with:
 
 ```bash
-./gradlew generatePipeline
+./gradlew  generatePWSPipeline
 ```
 
-This command assumes a `course.properties` (optional) and
-`pal.properties` in the top level of the course.
+Amazon S3 deployment credentials and Cloud Foundry deployment details must be placed 
+in a required _course-level_ `pal.properties` file.
+**Do not check pal.properties files into source code control.**
 
-The `generatePipeline` command reads the local `origin` git remote url
-in order to set the url on Concourse.
-If you would like to use another git remote, run
+
+## Generate for Amazon S3
+
+Create an Amazon S3 pipeline for all courses with:
 
 ```bash
-./gradlew generatePipeline -PremoteName=${REMOTE_NAME}
+./gradlew  generateS3Pipeline
 ```
 
-Create an archive pipeline with:
+Amazon S3 deployment credentials must be placed in a required _project-level_ `pal.properties` file.
+**Do not check pal.properties files into source code control.**
+
+
+## Provide content source code details
+
+The pipeline's git source url derives from your own local remote named `origin` unless
+you specify another using the Gradle property `remoteName`, for example:
 
 ```bash
-./gradlew generateArchivePipeline -Psubdomain=${COURSE_NAME} -Pversion=${COURSE_VERSION}
+./gradlew  generatePWSPipeline  -PremoteName=mcgonagall
 ```
 
-Push your pipeline with:
+The source url must be an SSH url, and the corresponding deployment `rsaKey` should be
+given in a required _project-level_ `pal.properties` file.
+**Do not check pal.properties into source code control.**
+
+
+## Push to Concourse
+
+Push your generated pipeline with:
 
 ```bash
-fly -t <target-name> set-pipeline -p ${COURSE_NAME} -c build/ci/pipeline.yml
+fly -t <target-name> set-pipeline -p <pipeline-name> -c build/ci/courses-pws-pipeline.yml
 ```
+or
+
+```bash
+fly -t <target-name> set-pipeline -p <pipeline-name> -c build/ci/courses-s3-pipeline.yml
+```
+
