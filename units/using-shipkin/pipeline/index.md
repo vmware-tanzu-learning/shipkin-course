@@ -4,11 +4,11 @@ pageTitle: Pipeline
 
 # Pipeline
 
-Shipkin can generate Concourse pipelines for publishing courses from a project to PWS or to Amazon S3.
+Shipkin can generate Concourse pipelines for publishing courses from a
+project to PWS or to Amazon S3.
 
-Generated pipelines will using student login credentials from an optional `course.properties` file
-in each course directory.
-
+Generated pipelines optionally add student login credentials from an
+optional `course.properties` file in each course directory.
 
 ## Generate for Pivotal Web Services
 
@@ -18,9 +18,9 @@ Generate a PWS pipeline for publishing all courses under a project with:
 ./gradlew  generatePWSPipeline
 ```
 
-Amazon S3 deployment credentials and Cloud Foundry deployment details must be placed 
-in a required _course-level_ `pal.properties` file.
-**Do not check pal.properties files into source code control.**
+Amazon S3 deployment credentials and Cloud Foundry deployment details
+must be placed in a required _course-level_ `pal.properties` file.
+**Do not** check pal.properties files into source code control.
 
 
 ## Generate for Amazon S3
@@ -31,22 +31,25 @@ Create an Amazon S3 pipeline for all courses with:
 ./gradlew  generateS3Pipeline
 ```
 
-Amazon S3 deployment credentials must be placed in a required _project-level_ `pal.properties` file.
-**Do not check pal.properties files into source code control.**
+Amazon S3 deployment credentials must be placed in a required
+_project-level_ `pal.properties` file.
+**Do not** check pal.properties files into source code control.
 
 
 ## Provide content source code details
 
-The pipeline's git source url derives from your own local remote named `origin` unless
-you specify another using the Gradle property `remoteName`, for example:
+The pipeline's git source url derives from your own local remote named
+`origin` unless you specify another using the Gradle property
+`remoteName`, for example:
 
 ```bash
 ./gradlew  generatePWSPipeline  -PremoteName=mcgonagall
 ```
 
-The source url must be an SSH url, and the corresponding deployment `rsaKey` should be
-given in a required _project-level_ `pal.properties` file.
-**Do not check pal.properties into source code control.**
+The source url must be an SSH url, and the corresponding deployment
+`rsaKey` should be given in a required _project-level_ `pal.properties`
+file.
+**Do not** check pal.properties into source code control.
 
 
 ## Push to Concourse
@@ -54,11 +57,10 @@ given in a required _project-level_ `pal.properties` file.
 Push your generated pipeline with:
 
 ```bash
-fly -t <target-name> set-pipeline -p <pipeline-name> -c build/ci/courses-pws-pipeline.yml
+fly -t ${TARGET_NAME} set-pipeline -p ${PIPELINE_NAME} -c build/ci/courses-pws-pipeline.yml
 ```
 or
 
 ```bash
-fly -t <target-name> set-pipeline -p <pipeline-name> -c build/ci/courses-s3-pipeline.yml
+fly -t ${TARGET_NAME} set-pipeline -p ${PIPELINE_NAME} -c build/ci/courses-s3-pipeline.yml
 ```
-

@@ -87,8 +87,8 @@ The top-level directory of the course repository should contain:
 
 ### Configuration
 
-The top level `build.gradle` file contains, in particular, the version of the
-courses in the `topLevelCourseVersion` variable.
+The top level `build.gradle` file contains, in particular, the version
+of the courses in the `topLevelCourseVersion` variable.
 The version should follow [semantic versioning](https://semver.org/) for
 the course material.
 
@@ -126,20 +126,21 @@ Within the course folder there are multiple files required.
     -   `courseTitle`, `courseVersion` and `baseName` are required.
     -   `units` is an array that specifies the order in which units are
         rendered on the index page.
-    -   `useSecurity` is a boolean field that toggles the use of basic auth
-        when the course is deployed.
+    -   `useSecurity` is a boolean field that toggles the use of basic
+        auth when the course is deployed.
         If no value is provided it defaults to true.
-    -   `feedbackUrl` is a link to your Google form for accepting feedback.
+    -   `feedbackUrl` is a link to your Google form for accepting
+        feedback.
         See the [feedback section](../feedback) for more info.
-    -   `feedbackUrlField` is the `name` attribute of the input containing
-        the *url* field on your feedback form.
+    -   `feedbackUrlField` is the `name` attribute of the input
+        containing the *url* field on your feedback form.
         It should look something like `entry.8888888888`.
     -   `disclaimer` can be set to `true` in the `shipkin` closure
         (it is `false` by default).
-    -   `reviewSpace` is the space used to deploy the application for review
-        on CF.
-    -   `productionSpace` is the space used to deploy the application for
-        production on CF.
+    -   `reviewSpace` is the space used to deploy the application for
+        review on CF.
+    -   `productionSpace` is the space used to deploy the application
+        for production on CF.
 
     {{codebase-file codebase="shipkin-course" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
 

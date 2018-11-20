@@ -1,9 +1,6 @@
 ---
-
 pageTitle: Feedback via Google forms and Pivotal Tracker
-
 ---
-
 
 # Feedback
 
