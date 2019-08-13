@@ -3,9 +3,12 @@ pageTitle: Shipkin Extensions
 ---
 
 # Extensions
+Shipkin currently offers two extensions to markdown.
 
-Shipkin currently offers an extension to markdown which can insert code
-directly from the codebases included in your `unit.json` file.
+## Github
+
+One can insert code directly from the codebases included in your
+`unit.json` file.
 Use the extension by inserting the following snippet anywhere in a
 markdown file.
 
@@ -24,3 +27,28 @@ markdown file.
 The included file will look as follows.
 
 {{codebase-file codebase="prerequisite-code" path="build.gradle" lang="groovy" ref="master" hidden="false"}}
+
+## Partials
+
+The other one can insert partials directly from a file in the course.
+Use the extension by inserting the following snippet anywhere in a
+markdown file.
+
+
+```markdown
+||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=false title="Wonder partial||
+||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=true title="Wonder partial||
+```
+
+-   `title`: the title to display on the toggle.
+-   `path`: the path to the file relative to the units root.
+-   `context-code`: code that allows for partials to be turned on/off
+     based on that code
+-   `hidden`: if specified and set to _true_ the block included from the
+     partial gets a toggle be be shown/hidden.
+
+||partial-file path="using-shipkin/extensions/partial.md" context-code="ABC" hidden=false title="Magic-partial"||
+
+
+**With toggle**
+||partial-file path="using-shipkin/extensions/partial.md" context-code="ABC" hidden=true title="Magic-partial"||
