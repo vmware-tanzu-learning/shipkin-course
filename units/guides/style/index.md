@@ -166,6 +166,8 @@ mind. Like it knows it killed the world once and got a taste for murder.
 # Lists
 
 Use a list to represent a collection containing two or more items.
+Use a numbered list when steps must happen in order.
+Use either if the order does not matter.
 
 ## Use lazy numbering for long lists
 
