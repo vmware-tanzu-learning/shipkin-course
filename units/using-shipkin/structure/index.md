@@ -141,6 +141,14 @@ Within the course folder there are multiple files required.
         review on CF.
     -   `productionSpace` is the space used to deploy the application
         for production on CF.
+    -   `topicKey` defines topics and the color used for them.
+        Topics can be set for lessons in the _unit.json_.
+        The following colors are available.
+        -   light-blue
+        -   teal
+        -   red
+        -   orange
+        -   green
 
     {{codebase-file codebase="shipkin-course" path="courses/shipkin/build.gradle" lang="groovy" ref="master" hidden="true"}}
 
