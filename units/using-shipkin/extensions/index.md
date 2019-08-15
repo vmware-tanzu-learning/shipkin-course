@@ -2,13 +2,13 @@
 pageTitle: Shipkin Extensions
 ---
 
-# Extensions
 Shipkin currently offers two extensions to markdown.
 
-## Github
+# Codebase-file
 
-One can insert code directly from the codebases included in your
-`unit.json` file.
+The _codebase-file_ extension can insert code directly from codebases
+included in your `unit.json` file.
+Those codebases need to live on Github and have to be public there.
 Use the extension by inserting the following snippet anywhere in a
 markdown file.
 
@@ -16,7 +16,7 @@ markdown file.
 {{codebase-file codebase="prerequisite-code" path="build.gradle" lang="groovy" ref="master" hidden="false"}}
 ```
 
--   `codebase`: The codebase when the file is located, as listed in the
+-   `codebase`: The codebase where the file is located, as listed in the
     `unit.json` file.
 -   `path`: the path to the file relative to the codebase root.
 -   `ref`: the branch or tag for the file.
@@ -28,27 +28,30 @@ The included file will look as follows.
 
 {{codebase-file codebase="prerequisite-code" path="build.gradle" lang="groovy" ref="master" hidden="false"}}
 
-## Partials
+# Partial-file
 
-The other one can insert partials directly from a file in the course.
+The _partial-file_ extension can insert partials directly from a file in
+the _units_ directory.
+Markdown content from partials is acceptable.
 Use the extension by inserting the following snippet anywhere in a
 markdown file.
 
 
 ```markdown
-||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=false title="Wonder partial||
-||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=true title="Wonder partial||
+||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=false title="wonder-partial||
+||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=true title="wonder-partial||
 ```
 
--   `title`: the title to display on the toggle.
+-   `title`: the title to display on the toggle, needs to be one word.
 -   `path`: the path to the file relative to the units root.
 -   `context-code`: code that allows for partials to be turned on/off
      based on that code
 -   `hidden`: if specified and set to _true_ the block included from the
-     partial gets a toggle be be shown/hidden.
+     partial gets a toggle be be shown/hidden and is hidden by default.
 
+## Without toggle
 ||partial-file path="using-shipkin/extensions/partial.md" context-code="ABC" hidden=false title="Magic-partial"||
 
 
-**With toggle**
+## With toggle, starts out hidden
 ||partial-file path="using-shipkin/extensions/partial.md" context-code="ABC" hidden=true title="Magic-partial"||
