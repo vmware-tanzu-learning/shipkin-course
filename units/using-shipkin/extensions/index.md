@@ -40,12 +40,19 @@ markdown file.
 ```markdown
 ||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=false title="wonder-partial||
 ||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=true title="wonder-partial||
+||partial-file path="using-shipkin/extensions/partial.md"  context-code="XYZ" hidden=true title="wonder-partial||
+||partial-file path="using-shipkin/extensions/partial.md"  hidden=true title="wonder-partial||
 ```
 
 -   `title`: the title to display on the toggle, needs to be one word.
 -   `path`: the path to the file relative to the units root.
 -   `context-code`: code that allows for partials to be turned on/off
-     based on that code
+     based on that code specified in as _contextCode_ in the
+     _build.gradle_ of the course. The third inclusion of the partial
+     will not be rendered since it is not matching the _contextCode_ set
+     in the _build.gradle_ for the Shipkin [course](../structure/index.html#courses).
+     The fourth one will render since it does not specify a
+     _context-code_.
 -   `hidden`: if specified and set to _true_ the block included from the
      partial gets a toggle be be shown/hidden and is hidden by default.
 
@@ -55,3 +62,10 @@ markdown file.
 
 ## With toggle, starts out hidden
 ||partial-file path="using-shipkin/extensions/partial.md" context-code="ABC" hidden=true title="Magic-partial"||
+
+## Context code not matching
+||partial-file path="using-shipkin/extensions/partial.md" context-code="XYZ" hidden=true title="Magic-partial"||
+
+
+## No context code specified
+||partial-file path="using-shipkin/extensions/partial.md" hidden=true title="Magic-partial"||

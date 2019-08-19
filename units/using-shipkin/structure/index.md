@@ -141,6 +141,9 @@ Within the course folder there are multiple files required.
         review on CF.
     -   `productionSpace` is the space used to deploy the application
         for production on CF.
+    -   `contextCode` (optional) to turn on specific partials, look at
+        the [partial file extension](../extensions/index.html#partial-file)
+        for more details.
     -   `topicKey` defines topics and the color used for them.
         Topics can be set for lessons in the _unit.json_.
         The following colors are available.

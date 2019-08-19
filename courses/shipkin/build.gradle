@@ -8,6 +8,7 @@ shipkin {
     feedbackUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfajZb-OKfWB7SGMgmTtaVCFO5VT3Fqtc2tJU5CMxO6x8DU4g/viewform"
     feedbackUrlField = "entry.1915922799"
     useSecurity = false
+    contextCode = "ABC"
 
     reviewSpace = "platform-acceleration-lab-review"
     productionSpace = "platform-acceleration-lab-production"
