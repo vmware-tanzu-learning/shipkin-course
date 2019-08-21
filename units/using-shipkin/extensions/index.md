@@ -42,6 +42,9 @@ markdown file.
 ||partial-file path="using-shipkin/extensions/partial.md"  context-code="ABC" hidden=true title="wonder-partial||
 ||partial-file path="using-shipkin/extensions/partial.md"  context-code="XYZ" hidden=true title="wonder-partial||
 ||partial-file path="using-shipkin/extensions/partial.md"  hidden=true title="wonder-partial||
+||partial-file path="using-shipkin/extensions/partial.md"  hidden=true title="call-out-partial call-out=true||
+||partial-file path="using-shipkin/extensions/partial.md"  title="call-out-partial call-out=true||
+
 ```
 
 -   `title`: the title to display on the toggle, needs to be one word.
@@ -55,17 +58,27 @@ markdown file.
      _context-code_.
 -   `hidden`: if specified and set to _true_ the block included from the
      partial gets a toggle be be shown/hidden and is hidden by default.
+-   `call-out`: if set to _true_ the block included from the partial is
+    reduced in font size and gets gray line on the left.
 
-## Without toggle
+## Inline - without toggle
 ||partial-file path="using-shipkin/extensions/partial.md" context-code="ABC" hidden=false title="Magic-partial"||
 
 
-## With toggle, starts out hidden
+## Inline - with toggle - starts out hidden
 ||partial-file path="using-shipkin/extensions/partial.md" context-code="ABC" hidden=true title="Magic-partial"||
 
-## Context code not matching
+## Inline - context code not matching
 ||partial-file path="using-shipkin/extensions/partial.md" context-code="XYZ" hidden=true title="Magic-partial"||
 
 
-## No context code specified
+## Inline - with toggle - no context code specified
 ||partial-file path="using-shipkin/extensions/partial.md" hidden=true title="Magic-partial"||
+
+
+## Call out - with toggle
+||partial-file path="using-shipkin/extensions/partial.md"  hidden=true title="call-out-partial call-out=true||
+
+
+## Call out - no toggle
+||partial-file path="using-shipkin/extensions/partial.md"  title="call-out-partial call-out=true||
