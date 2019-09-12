@@ -36,7 +36,7 @@ _project-level_ `pal.properties` file.
 **Do not** check pal.properties files into source code control.
 
 
-## Provide content source code details
+## Provide content Git details
 
 The pipeline's git source url derives from your own local remote named
 `origin` unless you specify another using the Gradle property
@@ -46,9 +46,8 @@ The pipeline's git source url derives from your own local remote named
 ./gradlew  generatePWSPipeline  -PremoteName=mcgonagall
 ```
 
-The source url must be an SSH url, and the corresponding deployment
-`rsaKey` should be given in a required _project-level_ `pal.properties`
-file.
+Add the deployment `rsaKey` for your content's repository to the
+required _project-level_ `pal.properties` file.
 **Do not** check pal.properties into source code control.
 
 
