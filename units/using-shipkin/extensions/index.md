@@ -65,3 +65,14 @@ markdown file.
 ## With toggle
 ||partial-file path="using-shipkin/extensions/partial.md"  title="toggled-partial inline=false||
 
+# Assignment submission
+
+You can enable inline assignment submission, by adding a button with id
+_assignment-submit-button_ and the assignment code as _data_ element to
+the lab, which you wish to enable it for.
+Email, cohort and course will be gathered from the context.
+
+```html
+<button type="button" id="assignment-submit-button" data-assignment="inline-assignment">Done!</button>
+
+```
