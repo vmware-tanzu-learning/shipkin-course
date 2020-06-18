@@ -105,7 +105,7 @@ contained courses.
 ## Courses
 
 Courses are stored under their name in the `courses` directory. 
-In our case as `shipkin`. 
+In our case as `shipkin`.
 There can be multiple courses per repo.
 
 Within the course folder there are multiple files required.

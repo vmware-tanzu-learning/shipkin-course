@@ -61,7 +61,7 @@ of changes so that they can easily keep up to date with the evolution of
 the units.
 
 See below for an example entry.
-Each entry must be contained to one line.
+Each entry must be constrained to one line.
 Update this file each time changes are made to the unit, following the
 following format.
 
