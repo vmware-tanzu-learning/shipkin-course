@@ -5,3 +5,6 @@ build
 *.iml
 pal.properties
 course.properties
+
+.project
+.settings/
