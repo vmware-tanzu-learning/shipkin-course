@@ -76,3 +76,41 @@ Email, cohort and course will be gathered from the context.
 <button type="button" id="assignment-submit-button" data-assignment="inline-assignment">Done!</button>
 
 ```
+
+# Codebase download links
+
+In order to support ePub format publication, codebase zip files can
+not be provided via an download from within the ePub itself.
+The requires that the codebase is hosted externally, and we are using
+Github releases in order to do this.
+
+The codebase zip file will be made available at a URL of the following
+form:
+
+```
+https://github.com/project/code-repo/releases/download/release-x.y.z/codebase-name.zip
+```
+
+So if this course were to have a codebase named `shipkin-examples`
+hosted in the `https://github.com/platform-acceleration-lab/shipkin-course-code.git`
+repository, then for release 8.7.0 of this course the URL would be:
+
+```
+https://github.com/platform-acceleration-lab/shipkin-course-code/releases/download/release-8.7.0/shipkin-examples.zip
+```
+
+For every codebase there will be an automatically defined
+"[link reference](https://spec.commonmark.org/0.29/#link-reference-definitions)"
+of the form `[codebase:codebase-name]`.
+So to refer to the codebase download described above you would do
+something like this:
+
+```
+You can [download the codebase][codebase:shipkin-examples] right now!
+```
+
+You can verify whether a codebase release is available at the right
+location by running the Gradle `checkPublishedCodebaseLinks`.
+You would not normally run this during course development as
+publication of such artefacts should be taken care of by a CI
+pipeline.
