@@ -79,15 +79,17 @@ Email, cohort and course will be gathered from the context.
 
 # Codebase download links
 
-In order to support ePub format publication, codebase zip files can
-not be provided via an download from within the ePub itself.
-The requires that the codebase is hosted externally, and we are using
-Github releases in order to do this.
+When a course is published in ePub format, codebase zip files can
+not reliably be provided via a download from within the ePub itself.
+In other words, a link to `../codebases/some-codebase.zip` will not
+work using all ePub readers.
+The means that the codebase downloads must hosted externally, and
+we are using Github releases in order to do this.
 
 The codebase zip file will be made available at a URL of the following
 form:
 
-```
+```bash
 https://github.com/project/code-repo/releases/download/release-x.y.z/codebase-name.zip
 ```
 
@@ -95,7 +97,7 @@ So if this course were to have a codebase named `shipkin-examples`
 hosted in the `https://github.com/platform-acceleration-lab/shipkin-course-code.git`
 repository, then for release 8.7.0 of this course the URL would be:
 
-```
+```bash
 https://github.com/platform-acceleration-lab/shipkin-course-code/releases/download/release-8.7.0/shipkin-examples.zip
 ```
 
@@ -105,7 +107,7 @@ of the form `[codebase:codebase-name]`.
 So to refer to the codebase download described above you would do
 something like this:
 
-```
+```bash
 You can [download the codebase][codebase:shipkin-examples] right now!
 ```
 

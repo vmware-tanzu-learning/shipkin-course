@@ -29,7 +29,7 @@ favoriteAnimal: turtle
 
 The body of the lab content is written in markdown.
 Shipkin uses the [Commonmark](http://commonmark.org/) flavor of
-Markdown, with a few [extensions](../extensions) (the [Commonmark Java](https://github.com/atlassian/commonmark-java) implementation, to be precise).
+Markdown, with a few [extensions](../extensions/index.html) (the [Commonmark Java](https://github.com/atlassian/commonmark-java) implementation, to be precise).
 
 ## Top matter
 

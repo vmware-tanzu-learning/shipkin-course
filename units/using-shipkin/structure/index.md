@@ -131,7 +131,7 @@ Within the course folder there are multiple files required.
         If no value is provided it defaults to true.
     -   `feedbackUrl` is a link to your Google form for accepting
         feedback.
-        See the [feedback section](../feedback) for more info.
+        See the [feedback section](../feedback/index.html) for more info.
     -   `feedbackUrlField` is the `name` attribute of the input
         containing the *url* field on your feedback form.
         It should look something like `entry.8888888888`.
@@ -170,7 +170,7 @@ to reorder.
 The order of the subjects and lessons is defined in each unit's
 `unit.json` file.
 
-More details on units can be found [here](../shipkin-units).
+More details on units can be found [here](../shipkin-units/index.html).
 
 ### Lessons
 
