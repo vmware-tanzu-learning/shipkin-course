@@ -84,21 +84,24 @@ not reliably be provided via a download from within the ePub itself.
 In other words, a link to `../codebases/some-codebase.zip` will not
 work using all ePub readers.
 The means that the codebase downloads must hosted externally, and
-we are using Github releases in order to do this.
+we use GitHub releases in order to do this.
 
 The codebase zip file will be made available at a URL of the following
 form:
 
 ```bash
-https://github.com/project/code-repo/releases/download/release-x.y.z/codebase-name.zip
+https://github.com/project/code-repo/releases/download/basename-release-x.y.z/codebase-name.zip
 ```
 
-So if this course were to have a codebase named `shipkin-examples`
-hosted in the `https://github.com/platform-acceleration-lab/shipkin-course-code.git`
+where _basename_ is the value of the `baseName` build property.
+
+So if a course with a basename of `shipkin-course` had
+a codebase named `shipkin-examples` hosted in the
+`https://github.com/platform-acceleration-lab/shipkin-course-code.git`
 repository, then for release 8.7.0 of this course the URL would be:
 
 ```bash
-https://github.com/platform-acceleration-lab/shipkin-course-code/releases/download/release-8.7.0/shipkin-examples.zip
+https://github.com/platform-acceleration-lab/shipkin-course-code/releases/download/shipkin-course-release-8.7.0/shipkin-examples.zip
 ```
 
 For every codebase there will be an automatically defined
@@ -116,3 +119,5 @@ location by running the Gradle `checkPublishedCodebaseLinks`.
 You would not normally run this during course development as
 publication of such artefacts should be taken care of by a CI
 pipeline.
+The Gradle task `publishCodebaseReleases` can be used to upload the
+codebase files to an appropriate GitHub release.

@@ -40,6 +40,11 @@ corresponding git repositories, which must be publicly accessible.
 Each codebase will be zipped along with its git repository in the
 `codebases` directory of the course zip folder.
 
+Codebases can (and should) be published as releases on GitHub so that
+they can be referenced using the
+[codebase download link extension](../extensions/index.html#codebase-download-links)
+by using the `publishCodebaseReleases` task.
+
 ## Creating a unit
 
 1.  Copy the __unit.json__ file into each unit.
