@@ -72,7 +72,18 @@
               "location": "feedback"
             }
           ]
+        },
+        {
+          "title": "EPUB",
+          "topic": "shipkin",
+          "materials": [
+            {
+              "title": "lab",
+              "location": "epub"
+            }
+          ]
         }
+
       ]
     },
     {

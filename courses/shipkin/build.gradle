@@ -34,6 +34,14 @@ shipkin {
         slideImage = "/sheep.png"
         logoImage = "/rocket.png"
     }
+
+    epub {
+        coverForegroundColor = "#FFFFFF"
+        coverBackgroundColor = "#003152"
+        title = 'Shipkin e-Book'
+        // simplifyContent = false
+        // buildDirectory = 'build/epub'
+    }
 }
 
 defaultTasks "tasks"

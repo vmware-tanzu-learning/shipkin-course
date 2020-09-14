@@ -4,13 +4,14 @@ buildscript {
         maven {
             url "http://platform-acceleration-lab-maven.s3.amazonaws.com"
         }
+        mavenLocal()
     }
 
     dependencies {
-        classpath "io.pivotal.pal.shipkin:shipkin-plugin:8.8.0"
+        classpath "io.pivotal.pal.shipkin:shipkin-plugin:8.9.0"
     }
     ext {
-        topLevelCourseVersion = "2.1.23-shipkin-8-8-0"
+        topLevelCourseVersion = "2.1.24-shipkin-8-9-0"
     }
 }
 
