@@ -79,10 +79,10 @@ Email, cohort and course will be gathered from the context.
 
 # Codebase download links
 
-When a course is published in ePub format, codebase zip files can
-not reliably be provided via a download from within the ePub itself.
+When a course is published in EPUB format, codebase zip files can
+not reliably be provided via a download from within the EPUB itself.
 In other words, a link to `../codebases/some-codebase.zip` will not
-work using all ePub readers.
+work using all EPUB readers.
 The means that the codebase downloads must hosted externally, and
 we use GitHub releases in order to do this.
 
@@ -119,5 +119,15 @@ location by running the Gradle `checkPublishedCodebaseLinks`.
 You would not normally run this during course development as
 publication of such artefacts should be taken care of by a CI
 pipeline.
+
 The Gradle task `publishCodebaseReleases` can be used to upload the
 codebase files to an appropriate GitHub release.
+When using this task you will need to provide a
+[GitHub access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+that has sufficient permission to be able to create releases in the codebase
+repository.
+You must supply the token with the `-PgithubAccessToken` option, for example:
+
+```
+./gradlew publishCodebaseReleases -PgithubAccessToken=1a2b3c4d5e6f7890
+```

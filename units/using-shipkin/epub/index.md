@@ -1,5 +1,5 @@
 ---
-pageTitle: EPUB Creation
+pageTitle: EPUB Creation and Publication
 ---
 
 # EPUB creation
@@ -24,9 +24,6 @@ The valid parameters are:
 1.  `buildDirectory` sets the directory where the EPUB file will be
     generated, which defaults to the `epub` sub-directory of the
     normal build directory.
-1.  `simplifyContent` is a boolean value that controls the output
-    of footer and sidebar text.
-    This is described further [below](#simplifying-content).
 
 # EPUB issues and good practices
 
@@ -53,28 +50,26 @@ to be permitted.
 
 The default Shipkin output contains a page footer and (for some pages)
 a navigation "sidebar".
-It also contains "instructor mode" content that is hidden in normal
+It also contains "instructor mode" content, which is hidden in normal
 use.
 
 EPUB documents already have built-in navigation capabilities.
 The footer styling does not render well in EPUB readers, and it can mask
 important content, especially on smaller screens.
 The hidden content is inaccessible and useless within an EPUB reader.
+For these reasons, these non-essential elements should not be included in
+the EPUB output.
 
-For these reasons, there is an option to remove these non-essential
-elements from the EPUB output.
-This can either be done by setting the `simplifyContent` option
-within the `epub` closure of the `build.gradle` file or, preferably,
-by setting the `simplifyContent` option on the command line.
-So, the best way to generate an EPUB file is to run the following
+When you generate content in the context of a Gradle `epub` task
+the unnecessary elements will automatically be omitted.
+However, it is possible that the generation process could pick up some
+"unsimplified" content from the result of a previous build, so the
+best way to generate an EPUB file is to run the following
 command:
 
 ```bash
-./gradlew clean epub -PsimplifyContent
+./gradlew clean epub
 ```
-
-It is best to run the `clean` step so that all of the content is
-regenerated with the `simplifyContent` setting in effect.
 
 ## Relative and implicit links
 
@@ -115,6 +110,35 @@ use the `-PpdfPresentations` option.
 A solution to fully embed presentation content within the EPUB will be
 delivered in due course.
 
+# Publishing generated EPUB files
 
+You can use Gradle task `publishEpub` can be used to publish the
+generated EPUB file to an appropriate GitHub release.
+When using this task you will need to provide a
+[GitHub access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+that has sufficient permission to be able to create releases in the
+course repository.
+You must supply the token with the `-PgithubAccessToken` option, for example:
 
+```
+./gradlew clean epub publishEpub -PgithubAccessToken=1a2b3c4d5e6f7890
+```
 
+The EPUB file will be made available at a URL of the following
+form:
+
+```bash
+https://github.com/project/course-repo/releases/download/basename-release-x.y.z/basename-YYYYMMDD.epub
+```
+
+where _basename_ is the value of the `baseName` build property and
+_YYYYMMDD_ is the creation date.
+
+So if a course with a basename of `shipkin-intro` was held in the
+`https://github.com/platform-acceleration-lab/shipkin-course.git`
+repository, then for release 8.7.0 of this course made on 23rd September 2020
+the URL would be:
+
+```bash
+https://github.com/platform-acceleration-lab/shipkin-course/releases/download/shipkin-intro-release-8.7.0/shipkin-intro-20200923.zip
+```
