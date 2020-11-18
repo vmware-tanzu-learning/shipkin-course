@@ -12,6 +12,7 @@ shipkin {
 
     reviewSpace = "platform-acceleration-lab-review"
     productionSpace = "platform-acceleration-lab-production"
+    domain = "apps.evans.pal.pivotal.io"
 
     units = [
         "using-shipkin",
