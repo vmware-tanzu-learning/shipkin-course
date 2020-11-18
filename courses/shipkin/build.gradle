@@ -39,8 +39,8 @@ shipkin {
         coverForegroundColor = "#FFFFFF"
         coverBackgroundColor = "#003152"
         title = 'Shipkin e-Book'
-        // simplifyContent = false
-        // buildDirectory = 'build/epub'
+        buildDirectory = "$buildDir/epub"   // This is the default
+        toleratedErrorCodes = ['RSC-006']   // This is the default
     }
 }
 

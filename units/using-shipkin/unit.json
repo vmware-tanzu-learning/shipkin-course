@@ -8,7 +8,7 @@
           "topic": "guide",
           "materials": [
             {
-              "location": "structure",
+              "location": "structure/index.html",
               "title": "lab"
             }
           ]
@@ -19,7 +19,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "labs"
+              "location": "labs/index.html"
             }
           ]
         },
@@ -29,7 +29,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "shipkin-units"
+              "location": "shipkin-units/index.html"
             }
           ]
         },
@@ -39,7 +39,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "theme"
+              "location": "theme/index.html"
             }
           ]
         },
@@ -49,7 +49,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "extensions"
+              "location": "extensions/index.html"
             }
           ]
         },
@@ -59,7 +59,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "pipeline"
+              "location": "pipeline/index.html"
             }
           ]
         },
@@ -69,7 +69,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "feedback"
+              "location": "feedback/index.html"
             }
           ]
         },
@@ -79,7 +79,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "epub"
+              "location": "epub/index.html"
             }
           ]
         }
@@ -95,7 +95,7 @@
           "materials": [
             {
               "title": "lab",
-              "location": "local-development"
+              "location": "local-development/index.html"
             }
           ]
         }

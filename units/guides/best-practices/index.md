@@ -162,7 +162,7 @@ small changes to the CF CLI may not require changes to the instructions.
     -   _DO_: Use `cf push` to deploy.
     -   _DO NOT_: ~~`cf push` should be used to deploy.~~
 
--   Read this [technical writing guide](pdf/bewritingguideV2.0.pdf).
+-   Read this [technical writing guide](https://msu.edu/course/tsm/251/bewritingguideV3%202%209-3-09.pdf).
 
 -   Write out numbers that are less than 10, and use numerals for
     numbers that are greater than or equal to 10.

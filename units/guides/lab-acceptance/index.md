@@ -9,8 +9,8 @@ modify existing labs.
 
 # Lab acceptance
 
--   Make sure that the lab adheres to the [styleguide](../style/index.html).
--   Ensure that the course follows the proper [course structure](../../using-shipkin/structure/index.html).
+-   Make sure that the lab adheres to the [style-guide](../style/index.html).
+-   Ensure that the course follows the proper, described in the separate _Using Shipkin_ guide.
 -   Check that the lab follows [best practices](../best-practices/index.html).
 -   Run through the lab—start to finish—to make sure that it
     works as expected.

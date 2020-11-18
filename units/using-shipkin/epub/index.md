@@ -24,6 +24,8 @@ The valid parameters are:
 1.  `buildDirectory` sets the directory where the EPUB file will be
     generated, which defaults to the `epub` sub-directory of the
     normal build directory.
+1.  `toleratedErrorCodes` is a list of EPUB validation error codes that
+    will be ignored, described further below.
 
 # EPUB issues and good practices
 
@@ -35,18 +37,33 @@ XHTML differs from HTML in that tags follow XML style and there is an
 absolute requirement that all opening tags must be closed.
 So, for example, the `<img>` tag must be closed either with an explicit
 `</img>` tag or be self-closing, as in `<img src="pic.jpg" />`.
+The HTML generated from the document creation process will be parsed
+and reformatted as XHTML automatically, so this should not be an issue.
 
-Closing of tags is not an issue when just creating markdown, as this
-will be converted correctly.
-It is, however, an issue if you create your own [theme](../theme/index.html)
-template or embed HTML directly.
+However, EPUB is also very strict in the attributes that are permitted
+on certain elements.
+This will not be an issue for automatically generated content but may
+be if you embed HTML directly.
+For example, the following embedded HTML:
 
-Having said that, in practice it appears that many EPUB readers offer
-some latitude in their interpretation of XHTML, so some things that are
-not *strictly* allowed, such as nesting `<ul>` within `<p>` elements, appear
-to be permitted.
+```HTML
+<iframe src="https://docs.google.com/presentation/d/someid/embed"
+  frameborder="0" width="100%" height="569"
+  allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+```
 
-## Simplifying content
+will fail to validate correctly because `frameborder`, `width`,
+`mozallowfullscreen` and `webkitallowfullscreen` are not valid XHTML attributes.
+In addition, the `allowfullscreen` attribute must have the value `allowfullscreen`.
+
+An acceptable equivalent would be:
+
+```html
+<iframe src="https://docs.google.com/presentation/d/someid/embed"
+  style="width: 100%; height: 60vh;" allowfullscreen="allowfullscreen"></iframe>
+```
+
+## Simplified content
 
 The default Shipkin output contains a page footer and (for some pages)
 a navigation "sidebar".
@@ -57,7 +74,7 @@ EPUB documents already have built-in navigation capabilities.
 The footer styling does not render well in EPUB readers, and it can mask
 important content, especially on smaller screens.
 The hidden content is inaccessible and useless within an EPUB reader.
-For these reasons, these non-essential elements should not be included in
+For these reasons, these non-essential elements will not be included in
 the EPUB output.
 
 When you generate content in the context of a Gradle `epub` task
@@ -92,9 +109,12 @@ automatically resolve to an index file within that directory.
 In other words a reference to something like `../appendix` will
 not be interpreted as `../appendix/index.html` as it might be
 by a web server.
+This applies also to the `location` property in the
+[unit selection file](../shipkin-units/index.html) (`unit.json`).
 
 The Shipkin `checkLinks` task will highlight these problems in
-any of your normal markdown content.
+any of your normal markdown content, as will the
+[EPUB validation](#epub-validation) process.
 Please take particular care not to introduce these issues if you
 add embedded HTML in your markdown documents or a custom theme.
 
@@ -109,6 +129,51 @@ use the `-PpdfPresentations` option.
 
 A solution to fully embed presentation content within the EPUB will be
 delivered in due course.
+
+## EPUB validation
+
+Shipkin embeds the W3C's [epubcheck](https://github.com/w3c/epubcheck)
+tool to perform validation against the EPUB3 standard.
+The `epub` task will both generate an EPUB file and also run the
+validation process on it.
+If the validation finds any _fatal_ or _error_ serverity issues,
+the build process will fail.
+A list of the errors found will be printed, for example:
+
+```
+There are EPUB validation failures
+=== RSC-007 ===
+ERROR(RSC-007): ./courses/style-guide/build/epub/styleguide-20201118.epub/OEBPS/Text/guides/lab-acceptance/index.html(115,130):
+Referenced resource "OEBPS/Text/using-shipkin/structure/index.html" could not be found in the EPUB.
+The following error codes were tolerated: [RSC-006]
+``` 
+
+The errors are reported against the path of the file within the EPUB
+archive.
+When debugging such issues you can either unpack the `.epub` file
+(it is a zip-format archive) or you will find the files that appear under
+the `OEBPS/Text` path in the archive under equivalent
+paths beneath the course `build/site` directory.
+
+Every error type has a unique code, such as `RSC-007` in the above example.
+If you are certain that the error will not, in practice, cause any issues with
+the EPUB readers that you will be targetting, you can mark those codes as
+"tolerated".
+These errors will then not cause build failures.
+
+By default, there is only one code that is tolerated.
+This is code `RSC-006` which corresponds to the message:
+"Remote resource reference not allowed; resource must be placed in the OCF".
+This is usually caused by embedded remote fonts and presentation links.
+These do not appear to cause issues for the majority of EPUB readers.
+
+The list of codes that will be tolerated can be configured through the
+`toleratedErrorCodes`
+property in the Shipkin `epub` closure in a build file.
+This value is a list of codes from `epubcheck` that should not cause an
+error exit, for example, `['RSC-006', 'RSC-010', 'OPF-012']`.
+Note that if this property is set then the `RSC-006` code must be explicitly
+included if it is needed.
 
 # Publishing generated EPUB files
 
@@ -142,3 +207,25 @@ the URL would be:
 ```bash
 https://github.com/platform-acceleration-lab/shipkin-course/releases/download/shipkin-intro-release-8.7.0/shipkin-intro-20200923.zip
 ```
+
+## Listing release URLs
+
+Although the release URL is of a known form, you can obtain the URL of
+the published assets for the current release (if any) by using the `listEpubAssetUrls`
+task.
+This, again, needs the `-PgithubAccessToken` option to be supplied.
+
+Under normal circumstances there should only be a single asset for
+a release of a course.
+It is, however, possible for multiple URLs to be listed if a release is
+re-published on different days.
+
+## Managing pre-releases
+
+When releases are published to GitHub they have the "pre-release" flag
+set on them to indicate that they have not yet undergone a final review.
+Once an EPUB has been reviewed, the `makeEpubReleaseFinal` task will
+clear the pre-release flag from the GitHub release.
+In order to remove redundant content, the `purgeEpubPreReleases`
+task can be used to delete any pre-releases created before the current
+release, regardless of whether it has yet been marked as "final" or not).
