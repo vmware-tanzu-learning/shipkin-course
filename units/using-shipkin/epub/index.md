@@ -26,6 +26,8 @@ The valid parameters are:
     normal build directory.
 1.  `toleratedErrorCodes` is a list of EPUB validation error codes that
     will be ignored, described further below.
+1. `presentationFormat`, described in [Embedded presentations](#embedded-presentations)
+    below.
 
 # EPUB issues and good practices
 
@@ -121,14 +123,32 @@ add embedded HTML in your markdown documents or a custom theme.
 ## Embedded presentations
 
 The use of PDF-format presentations within an EPUB is not supported.
-Embedding a presentation from Google Slides, not in PDF format,
+Embedding an online presentation from Google Slides, not in PDF format,
 does work (although, obviously, the content cannot then be read
 offline).
-In practice this means that when the EPUB task is run you must not
-use the `-PpdfPresentations` option.
+Shipkin does, however, have the capability to convert Google Slides
+presentations into SVG format and embed this into the output HTML.
+This is the default behaviour when generating an EPUB.
 
-A solution to fully embed presentation content within the EPUB will be
-delivered in due course.
+The output format can be selected by using the `presentationFormat`
+option either  in the build file or using `-PpresentationFormat=...`
+on the command line.
+The valid values for `presentationFormat` are:
+
+* `default`: equivalent to `svg` in EPUB mode or `online` otherwise 
+* `online`: embeds the online presentation in an `<iframe>`
+* `pdf`: downloads and embeds a PDF-format version of the slides
+* `svg`: converts the slides to SVG format and embeds those
+
+Note that the SVG process is slow (typically taking 2-3 seconds per
+slide) so it may be more convenient to use the `online` format during
+course development and first checks of EPUB output.
+
+You should also note that the choice of presentation format only
+applies to slides embedded as a result of using the
+`google-presentation` item type in a `unit.json` file.
+Presentations that have been directly embedded will not be
+converted.
 
 ## EPUB validation
 
